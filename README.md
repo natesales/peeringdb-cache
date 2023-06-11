@@ -20,10 +20,6 @@ Once your cache is running, you can point your tools to the cache instead of Pee
 
 The cache will automatically sync with PeeringDB approximately every 6 hours. You can also manually sync the cache by making a `GET` request to `/sync`.
 
-```bash
-docker exec -it peeringdb-cache curl localhost:8080/sync
-```
-
 ## Monitoring
 
 A Prometheus metrics endpoint is available at `/metrics`.
