@@ -15,7 +15,7 @@ pdb = Client(cfg={
         "database": {
             "engine": "sqlite3",
             "host": "",
-            "name": "/data/peeringdb.sqlite3",
+            "name": "data/peeringdb.sqlite3",
             "password": "",
             "port": 0,
             "user": ""
@@ -60,6 +60,8 @@ sched.start()
 def model_to_jdict(model):
     d = json.loads(serializers.serialize("json", [model]))[0]
     resp = d["fields"]
+    resp["created"] = resp["created"]+"Z"
+    resp["updated"] = resp["updated"]+"Z"
     resp["id"] = d["pk"]
     return resp
 
