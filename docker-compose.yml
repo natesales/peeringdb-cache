@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   peeringdb-cache:
-    image: peeringdb-cache:latest
+    image: ghcr.io/natesales/peeringdb-cache:latest
     container_name: peeringdb-cache
     volumes:
       - ./peeringdb-cache:/data

@@ -37,5 +37,5 @@ docker run \
     -v ./peeringdb-cache:/data \
     -p 8080:8080 \
     -e PEERINGDB_API_KEY=your-peeringdb-api-key \
-    peeringdb-cache:latest
+    ghcr.io/natesales/peeringdb-cache:latest
 ```
