@@ -15,7 +15,7 @@ pdb = Client(cfg={
         "database": {
             "engine": "sqlite3",
             "host": "",
-            "name": "data/peeringdb.sqlite3",
+            "name": "/data/peeringdb.sqlite3",
             "password": "",
             "port": 0,
             "user": ""
