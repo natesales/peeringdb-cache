@@ -37,8 +37,9 @@ pdb = Client(cfg={
 
 class SyncTask(threading.Thread):
     def run(self, *args, **kwargs):
+        rs = resource.all_resources()
         global last_sync
-        pdb.update_all()
+        pdb.updater.update_all(rs)
         last_sync = time.time()
 
 
